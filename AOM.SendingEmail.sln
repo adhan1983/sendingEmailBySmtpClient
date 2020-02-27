@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOM.SendingEmail.Api", "AOM.SendingEmail.Api\AOM.SendingEmail.Api.csproj", "{900CB0F6-7DE1-4329-BCE1-747C3F3F481F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{900CB0F6-7DE1-4329-BCE1-747C3F3F481F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900CB0F6-7DE1-4329-BCE1-747C3F3F481F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900CB0F6-7DE1-4329-BCE1-747C3F3F481F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900CB0F6-7DE1-4329-BCE1-747C3F3F481F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A523745B-1C88-45C5-B52D-32AA19BF2A19}
+	EndGlobalSection
+EndGlobal
