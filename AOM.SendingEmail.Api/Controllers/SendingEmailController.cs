@@ -1,28 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using AOM.SendingEmail.ClientEmail.Dtos;
+using AOM.SendingEmail.ClientEmail.Interfaces.Services;
 
 namespace AOM.SendingEmail.Api.Controllers
 {
     [ApiController]
-    [Route("api/vi/sendingemail")]
+    [Route("api/v1/sendingemail")]
     public class SendingEmailController : ControllerBase
-    {       
-        private readonly ILogger<SendingEmailController> _logger;
-        private readonly IEmailProxyClient _proxyClient;
+    {   
+        private readonly IEmailClient _proxyClient;
+        public SendingEmailController(IEmailClient proxyClient) => _proxyClient = proxyClient;
 
-        public SendingEmailController(ILogger<SendingEmailController> logger, IEmailProxyClient proxyClient)
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody]EmailClientDto email)
         {
-            _logger = logger;
-            _proxyClient = proxyClient;
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            await _proxyClient.SendEmail("adhan.maldonado@yahoo.com.br", "Teste", "Teste Mensagem");
+            await _proxyClient.SendEmail(email);
 
             return Ok("Email enviado com sucesso");
-        }
+        }      
     }
 }
